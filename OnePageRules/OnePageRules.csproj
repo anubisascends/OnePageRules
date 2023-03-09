@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OnePageRules Core\OnePageRules Core.csproj" />
+    <ProjectReference Include="..\OnePageRules Database\OnePageRules Database.sqlproj" />
+    <ProjectReference Include="..\OnePageRules Views\OnePageRules Views.csproj" />
+  </ItemGroup>
+
+</Project>
