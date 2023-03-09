@@ -1,3 +1,5 @@
+using OnePageRules_WebAPI.Repositories;
+using OnePageRules_WebAPI.Repositories.Interfaces;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,6 +14,7 @@ builder.Logging.ClearProviders();
 builder.Logging.AddSerilog(logger);
 
 // Add services to the container.
+builder.Services.AddTransient<IRepository, SqlRepository>();
 
 
 builder.Services.AddControllers();

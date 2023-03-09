@@ -1,4 +1,6 @@
-﻿namespace OnePageRules_WebAPI.Models
+﻿using System.Collections.ObjectModel;
+
+namespace OnePageRules_WebAPI.Models
 {
     public class Equipment
     {
@@ -13,5 +15,6 @@
         public int EquipmentId { get; set; }
         public byte Attacks { get; set; }
         public string? Range { get; set; }
+        public ObservableCollection<SpecialRule> SpecialRules { get; set; } = new();
     }
 }
