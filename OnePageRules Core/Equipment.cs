@@ -5,8 +5,7 @@ using System.Text;
 
 namespace OnePageRules.Core
 {
-    [ObservableObject]
-    public partial class Equipment
+    public partial class Equipment : ObservableObject
     {
         [ObservableProperty]
         private string? name;
@@ -16,9 +15,6 @@ namespace OnePageRules.Core
 
         [ObservableProperty]
         private byte attacks;
-
-        [ObservableProperty]
-        private byte armorPiercing;
 
         [ObservableProperty]
         private ObservableCollection<SpecialRule> specialRules = new();
@@ -46,17 +42,17 @@ namespace OnePageRules.Core
 
         public override string ToString()
         {
-            var builder = new StringBuilder(name);
+            var builder = new StringBuilder(Name);
 
             builder.Append(" (");
 
-            if(range > 0)
+            if(Range > 0)
             {
-                builder.Append(range);
+                builder.Append(Range);
                 builder.Append("\"");
             }
 
-            if(attacks > 0)
+            if(Attacks > 0)
             {
                 if (builder[builder.Length - 1] != '(')
                 {
@@ -64,21 +60,22 @@ namespace OnePageRules.Core
                 }
 
                 builder.Append("A");
-                builder.Append(attacks);
+                builder.Append(Attacks);
             }
 
-            if(armorPiercing > 0)
+            var temp = new StringBuilder();
+
+            foreach (var item in SpecialRules)
             {
-                if (builder[builder.Length - 1] != '(')
+                if(temp.Length > 0)
                 {
-                    builder.Append(", ");
+                    temp.Append(", ");
                 }
 
-                builder.Append("AP(");
-                builder.Append(armorPiercing);
-                builder.Append(")");
+                temp.Append(item);
             }
 
+            builder.Append(temp.ToString());
             builder.Append(")");
 
             return builder.ToString();

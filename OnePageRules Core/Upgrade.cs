@@ -2,8 +2,7 @@
 
 namespace OnePageRules.Core
 {
-    [ObservableObject]
-    public partial class Upgrade
+    public partial class Upgrade : ObservableObject
     {
         [ObservableProperty]
         private string? name;

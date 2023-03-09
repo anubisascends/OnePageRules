@@ -3,8 +3,7 @@ using System.Collections.Generic;
 
 namespace OnePageRules.Core
 {
-    [ObservableObject]
-    public partial class Model
+    public partial class Model : ObservableObject
     {
         [ObservableProperty]
         private EquipmentCollection equipment = new();

@@ -1,12 +1,10 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Windows.Input;
 
 namespace OnePageRules.Core
 {
-    [ObservableObject]
-    public partial class Unit
+    public partial class Unit : ObservableObject
     {
         [ObservableProperty]
         private string? name;

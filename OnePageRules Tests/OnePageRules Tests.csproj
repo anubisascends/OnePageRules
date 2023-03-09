@@ -22,4 +22,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\OnePageRules Core\OnePageRules Core.csproj" />
+  </ItemGroup>
+
 </Project>
