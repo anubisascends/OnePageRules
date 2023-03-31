@@ -6,6 +6,7 @@ BEGIN
 	INSERT INTO @DataTable
 		(ID, Label)
 	VALUES
+		-- Alien Hives
 		(1, 'Razor Claw')
 		,(2, 'Stomp')
 		,(3, 'Heavy Piercing Claws')
@@ -87,6 +88,37 @@ BEGIN
 		,(79, 'Spore Bombs')
 		,(80, 'Titanic Jaws')
 		,(81, 'Titanic Stomp')
+
+		-- Battle Brothers
+		,(82, 'Heavy Rifle')
+		,(83, 'CCW')
+		,(84, 'Heavy Pistols')
+		,(85, 'Heavy Flamethrower')
+		,(86, 'Dual Energy Claws')
+		,(87, 'Grenade Launchers')
+		,(88, 'Twin Heavy Rifles')
+		,(89, 'Storm Rifle')
+		,(90, 'Death Launcher')
+		,(91, 'Twin Heavy Machineguns')
+		,(92, 'Demolition Cannon')
+		,(93, 'Heavy Flak Cannon')
+		,(94, 'Engineer Crew')
+		,(95, 'Twin Fusion Rifles')
+		,(96, 'Walker Fists')
+		,(97, 'Twin Typhoon Missles')
+		,(98, 'Miniguns')
+		,(99, 'Storm Missles')
+		,(100, 'Twin Miniguns')
+		,(101, 'Typhoon Missles')
+		,(102, 'Heavy Pistol')
+		,(103, 'Twin Fusion Rifle')
+		,(104, 'Heavy Rifles')
+		,(105, 'Twin Heavy Rifle')
+		,(106, 'Twin Heavy Machinegun')
+		,(107, 'Twin Flamethrower Cannons')
+		,(108, 'Twin Minigun')
+		,(109, 'Twin Heavy Flamethrower')
+		,(110, 'Heavy Flamethrowers')
 
 	SET IDENTITY_INSERT dbo.Equipment ON
 

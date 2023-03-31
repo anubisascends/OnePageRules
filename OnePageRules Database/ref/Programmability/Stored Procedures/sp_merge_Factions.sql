@@ -8,7 +8,7 @@ BEGIN
     (
         VALUES
         (1,1,'Alien Hives',0, 2.5)
-        ,(2,1,'Battle Brothers',0,1)
+        ,(2,1,'Battle Brothers',0,2.5)
         ,(3,1,'Blood Brothers',2,1)
         ,(4,1,'Dark Brothers',2,1)
         ,(5,1,'Knight Brothers',2,1)

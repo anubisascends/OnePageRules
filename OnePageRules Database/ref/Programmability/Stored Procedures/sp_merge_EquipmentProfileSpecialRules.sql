@@ -68,7 +68,29 @@ BEGIN
 		,(57, 55, 'AP', 4)
 		,(58, 55, 'Deadly', 6)
 		,(59, 49, 'AP', 2)
-		-- Alien Hives Upgrades
+		-- Battle Brothers Unit Default
+		,(60, 57, 'AP', 1)
+		,(61, 58, 'AP', 1)
+		,(62, 59, 'AP', 1)
+		,(63, 60, 'AP', 1)
+		,(64, 61, 'AP', 1)
+		,(65, 62, 'AP', 1)
+		,(66, 63, 'AP', 1)
+		,(67, 64, 'AP', 2)
+		,(68, 65, 'AP', 1)
+		,(69, 66, 'AP', 1)
+		,(70, 67, 'AP', 1)
+		,(71, 68, 'AP', 1)
+		,(72, 69, 'Rending', 0)
+		,(73, 70, 'Blast', 3)
+		,(74, 71, 'AP', 2)
+		,(75, 72, 'AP', 1)
+		,(76, 73, 'AP', 1)
+		,(77, 74, 'AP', 1)
+		,(78, 75, 'AP', 1)
+		,(79, 76, 'AP', 1)
+		,(80, 77, 'AP', 1)
+		-- stopped at APC
 
 	merge dbo.EquipmentProfileSpecialRules as target
 	using @datatable as source
