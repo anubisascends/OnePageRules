@@ -1,0 +1,9 @@
+﻿CREATE TABLE [dbo].[UpgradeTables]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY,
+	[FactionId] INT NOT NULL,
+	[Group] NVARCHAR(6) NOT NULL DEFAULT 'A',
+	[Order] TINYINT NOT NULL DEFAULT 0,
+	[Label] NVARCHAR(50) NOT NULL,
+	CONSTRAINT FK_UpgradeTables_Faction FOREIGN KEY (FactionId) REFERENCES dbo.Factions(Id)
+)

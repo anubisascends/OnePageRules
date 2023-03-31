@@ -30,3 +30,9 @@ GO
 
 EXEC dbo.sp_merge_UnitEquipment
 GO
+
+exec dbo.sp_merge_EquipmentProfiles
+GO
+
+exec dbo.sp_merge_EquipmentProfileSpecialRules
+GO

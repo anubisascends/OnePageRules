@@ -84,6 +84,13 @@
     <Build Include="ref\Programmability\Stored Procedures\sp_merge_UnitEquipment.sql" />
     <Build Include="ref\Views\view_UnitEquipment.sql" />
     <Build Include="ref\Views\view_Units_Complete.sql" />
+    <Build Include="ref\Tables\UpgradeTables.sql" />
+    <Build Include="ref\Tables\EquipmentProfiles.sql" />
+    <Build Include="ref\Programmability\Stored Procedures\sp_merge_EquipmentProfiles.sql" />
+    <Build Include="ref\Tables\EquipmentProfileSpecialRules.sql" />
+    <Build Include="ref\Programmability\Stored Procedures\sp_merge_EquipmentProfileSpecialRules.sql" />
+    <Build Include="ref\Views\view_EquipmentProfileSpecialRules.sql" />
+    <Build Include="ref\Views\view_EquipmentProfileSpecialRules_Concat.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="LocalDatabase.publish.xml" />
