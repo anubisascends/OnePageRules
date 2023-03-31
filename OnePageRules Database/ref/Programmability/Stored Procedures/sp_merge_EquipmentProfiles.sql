@@ -6,6 +6,7 @@ BEGIN
 	INSERT INTO @DataTable
 		(ID, Equipment, Attacks, [Range])
 	VALUES
+		-- Alien Hives Unit Default
 		(1,  'Razor Claw', 6, 'melee')
 		,(2, 'Stomp', 4, 'melee')
 		,(3, 'Heavy Piercing Claws', 6, 'melee')
@@ -61,6 +62,7 @@ BEGIN
 		,(54, 'Spore Bombs', 1, '6"')
 		,(55, 'Titanic Jaws', 3, 'melee')
 		,(56, 'Titanic Stomp', 12, 'melee')
+		-- Alien Hives Upgrades
 
 	SET IDENTITY_INSERT dbo.equipmentprofiles ON
 

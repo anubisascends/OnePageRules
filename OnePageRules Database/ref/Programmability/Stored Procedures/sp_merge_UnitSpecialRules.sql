@@ -96,6 +96,9 @@ BEGIN
 		,(88, 'Spores', 'Explode', 1)
 		,(89, 'Massive Spore', 'Explode', 3)
 		,(90, 'Massive Spore', 'Tough', 3)
+		,(91, 'Rapacious Beast', 'Aircraft', 0)
+		,(92, 'Rapacious Beast', 'Fearless', 0)
+		,(93, 'Rapacious Beast', 'Tough', 6)
 
 	SET IDENTITY_INSERT dbo.UnitSpecialRules ON
 

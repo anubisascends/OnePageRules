@@ -4,5 +4,6 @@
 	[GameId] INT NOT NULL,
 	[Label] NVARCHAR(50) NOT NULL, 
     [ParentId] INT NOT NULL DEFAULT 0, 
+	[Version] NVARCHAR(15) NOT NULL DEFAULT '1',
     CONSTRAINT [FK_Factions_Games] FOREIGN KEY (GameId) REFERENCES dbo.Games([Id])
 )

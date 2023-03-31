@@ -5,7 +5,8 @@
 		F1.Id,
 		G.Label as GameLabel,
 		F1.Label as FactionLabel,
-		F2.Label as ParentLabel
+		F2.Label as ParentLabel,
+		F1.Version
 	FROM 
 		dbo.Factions F1
 			INNER JOIN dbo.Games G ON F1.GameId = G.Id

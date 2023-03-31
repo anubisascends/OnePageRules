@@ -8,7 +8,7 @@ FROM
 	SELECT DISTINCT T2.EquipmentProfileId, 
 		(
 			SELECT
-				T1.SpecialRule + ',' as [text()]
+				T1.SpecialRule + ', ' as [text()]
 			FROM
 				dbo.view_EquipmentProfileSpecialRules T1
 			WHERE T1.EquipmentProfileId = T2.EquipmentProfileId

@@ -61,6 +61,7 @@
     <Folder Include="ref\Programmability" />
     <Folder Include="ref\Programmability\Stored Procedures" />
     <Folder Include="ref\Views" />
+    <Folder Include="ref\Programmability\Assemblies" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="PostDeploymentScript.sql" />
@@ -82,8 +83,6 @@
     <Build Include="ref\Programmability\Stored Procedures\sp_merge_Equipment.sql" />
     <Build Include="ref\Tables\UnitEquipment.sql" />
     <Build Include="ref\Programmability\Stored Procedures\sp_merge_UnitEquipment.sql" />
-    <Build Include="ref\Views\view_UnitEquipment.sql" />
-    <Build Include="ref\Views\view_Units_Complete.sql" />
     <Build Include="ref\Tables\UpgradeTables.sql" />
     <Build Include="ref\Tables\EquipmentProfiles.sql" />
     <Build Include="ref\Programmability\Stored Procedures\sp_merge_EquipmentProfiles.sql" />
@@ -91,8 +90,20 @@
     <Build Include="ref\Programmability\Stored Procedures\sp_merge_EquipmentProfileSpecialRules.sql" />
     <Build Include="ref\Views\view_EquipmentProfileSpecialRules.sql" />
     <Build Include="ref\Views\view_EquipmentProfileSpecialRules_Concat.sql" />
+    <Build Include="ref\Views\view_EquipmentProfiles.sql" />
+    <Build Include="ref\Views\view_EquipmentProfiles_Concat.sql" />
+    <Build Include="ref\Views\view_UnitSpecialRules.sql" />
+    <Build Include="ref\Views\view_UnitSpecialRules_Concat.sql" />
+    <Build Include="ref\Views\view_Units.sql" />
+    <Build Include="ref\Views\view_UnitEquipment.sql" />
+    <Build Include="ref\Views\view_UnitEquipment_Concat.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="LocalDatabase.publish.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
 </Project>
