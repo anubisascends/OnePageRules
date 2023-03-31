@@ -7,6 +7,7 @@ namespace OnePageRules_WebAPI.Repositories.Interfaces
         IEnumerable<Game> GetGames();
         IEnumerable<Faction> GetFactions();
         IEnumerable<Faction> GetFactions(int gameId);
-        IEnumerable<EquipmentProfile> GetEquipmentProfiles(int factionId, int equipmentId);
+        IEnumerable<EquipmentProfile> GetEquipmentProfiles(int factionId);
+        IEnumerable<Equipment> GetEquipment();
     }
 }

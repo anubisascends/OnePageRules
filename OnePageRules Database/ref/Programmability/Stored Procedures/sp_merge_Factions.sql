@@ -1,19 +1,12 @@
-﻿CREATE PROCEDURE [dbo].[sp_mergefactions]
+﻿CREATE PROCEDURE [dbo].[sp_merge_Factions]
 AS
 BEGIN
-    -- table structure
+    SET IDENTITY_INSERT dbo.Factions ON
 
-    DECLARE @DataTable as TABLE
+    MERGE dbo.Factions AS TARGET
+    USING 
     (
-        ID INT,
-        GameID INT,
-        Label varchar(50),
-        ParentID INT
-    )
-
-    INSERT INTO @DataTable
-        (ID, GameID, Label, ParentID)
-    VALUES
+        VALUES
         (1,1,'Alien Hives',0),
         (2,1,'Battle Brothers',0),
         (3,1,'Blood Brothers',2),
@@ -130,23 +123,25 @@ BEGIN
         (114,2,'Ratmen Clans',0),
         (115,2,'Rebel Geurillas',0),
         (116,2,'Robot Legions',0)
+    ) AS SOURCE
+    (
+        [Id],
+        [GameId],
+        [Label],
+        [ParentId]
+    )ON TARGET.ID = SOURCE.ID
+    WHEN MATCHED THEN
+        UPDATE SET TARGET.GameID = SOURCE.GameID, TARGET.Label = Source.Label, TARGET.ParentID = SOURCE.ParentID
+    WHEN NOT MATCHED BY TARGET THEN
+        INSERT (ID, GameID, Label, ParentID) VALUES (SOURCE.ID, SOURCE.GameID, SOURCE.Label, SOURCE.ParentID)
+    WHEN NOT MATCHED BY SOURCE THEN
+        DELETE;
 
-        SET IDENTITY_INSERT dbo.Factions ON
+    SET IDENTITY_INSERT dbo.Factions OFF
 
-        MERGE dbo.Factions AS TARGET
-        USING @DataTable AS SOURCE ON TARGET.ID = SOURCE.ID
-        WHEN MATCHED THEN
-            UPDATE SET TARGET.GameID = SOURCE.GameID, TARGET.Label = Source.Label, TARGET.ParentID = SOURCE.ParentID
-        WHEN NOT MATCHED BY TARGET THEN
-            INSERT (ID, GameID, Label, ParentID) VALUES (SOURCE.ID, SOURCE.GameID, SOURCE.Label, SOURCE.ParentID)
-        WHEN NOT MATCHED BY SOURCE THEN
-            DELETE;
+    DECLARE @MaxID INT
+    SELECT @MaxID = MAX(Id) FROM dbo.Factions
 
-        SET IDENTITY_INSERT dbo.Factions OFF
-
-        DECLARE @MaxID INT
-        SELECT @MaxID = MAX(Id) FROM dbo.Factions
-
-        DBCC CHECKIDENT ('Factions', RESEED, @MaxID)
+    DBCC CHECKIDENT ('Factions', RESEED, @MaxID)
 END
 GO

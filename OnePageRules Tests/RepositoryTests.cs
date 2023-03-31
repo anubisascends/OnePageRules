@@ -1,11 +1,5 @@
 ﻿using Microsoft.Extensions.Configuration;
 using OnePageRules_WebAPI.Repositories;
-using OnePageRules_WebAPI.Repositories.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace OnePageRules_Tests
 {
@@ -73,6 +67,45 @@ namespace OnePageRules_Tests
 
             // assess
             Assert.False(factions.Any());
+        }
+
+        [Fact]
+        public void SQLRepository_GetEquipmentProfiles_Success()
+        {
+            // arrange
+            var repo = new SqlRepository(configuration);
+
+            // act
+            var result = repo.GetEquipmentProfiles(1);
+
+            // assess
+            Assert.True(result.Any());
+        }
+
+        [Fact]
+        public void SQLRepository_GetEquipmentProfiles_Fail()
+        {
+            // arrange
+            var repo = new SqlRepository(configuration);
+
+            // act
+            var result = repo.GetEquipmentProfiles(1000);
+
+            // assess
+            Assert.False(result.Any());
+        }
+
+        [Fact]
+        public void SQLRepository_GetEquipment_Success()
+        {
+            // arrange
+            var repo = new SqlRepository(configuration);
+
+            // act
+            var result = repo.GetEquipment();
+
+            // assess
+            Assert.True(result.Any());
         }
     }
 }
