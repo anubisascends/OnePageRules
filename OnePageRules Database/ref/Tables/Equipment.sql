@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[Equipment]
+﻿CREATE TABLE [ref].[Equipment]
 (
 	[Id] INT NOT NULL PRIMARY KEY IDENTITY,
 	[Label] NVARCHAR(75) NOT NULL, 

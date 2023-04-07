@@ -1,36 +1,35 @@
-﻿CREATE PROCEDURE [dbo].[sp_merge_Games]
+﻿CREATE PROCEDURE [ref].[sp_merge_games]
 AS
 BEGIN
 
-    SET IDENTITY_INSERT dbo.Games ON
+    DECLARE @datatable table (id int identity(1,1), label nvarchar(50), short nvarchar(5))
+    
+    insert into @datatable
+        (label, short)
+    values
+        ('Grimdark Future', 'GF'),
+        ('Grimdark Future: Firefight', 'GFF'),
+        ('Age of Fantasy', 'AoF'),
+        ('Age of Fantasy: Skirmish', 'AoFS'),
+        ('Age of Fantasy: Regiments', 'AoFR'),
+        ('Wrafleets: FLT', 'FTL')
 
-	MERGE dbo.Games TARGET
-    USING 
-    (
-      VALUES
-        (1, 'Grimdark Future', 'GF'),
-        (2, 'Grimdark Future: Firefight', 'GFF'),
-        (3, 'Age of Fantasy', 'AoF'),
-        (4, 'Age of Fantasy: Skirmish', 'AoFS'),
-        (5, 'Age of Fantasy: Regiments', 'AoFR'),
-        (6, 'Wrafleets: FLT', 'FTL')
-    )AS SOURCE
-    (
-        [Id],
-        [Label],
-        [Short]
-    )ON TARGET.Id = SOURCE.Id 
+    SET IDENTITY_INSERT ref.Games ON
+
+	MERGE ref.Games TARGET
+    USING @datatable AS SOURCE
+    ON TARGET.Id = SOURCE.id 
     WHEN MATCHED THEN
-        UPDATE SET TARGET.Label = SOURCE.LABEL, TARGET.Short = SOURCE.Short
+        UPDATE SET TARGET.Label = SOURCE.LABEL, TARGET.Short = SOURCE.short
     WHEN NOT MATCHED BY TARGET THEN
-        INSERT (ID, Label, Short) VALUES (SOURCE.ID, SOURCE.LABEL, SOURCE.Short)
+        INSERT (ID, Label, Short) VALUES (SOURCE.id, SOURCE.label, SOURCE.short)
     WHEN NOT MATCHED BY SOURCE THEN
         DELETE;
 
-    SET IDENTITY_INSERT dbo.Games OFF
+    SET IDENTITY_INSERT ref.Games OFF
 
     DECLARE @MaxID INT
-    SELECT @MaxID = MAX(Id) FROM dbo.Games
+    SELECT @MaxID = MAX(Id) FROM ref.Games
 
-    DBCC CHECKIDENT ('Games', RESEED, @MaxID)
+    DBCC CHECKIDENT ('ref.Games', RESEED, @MaxID)
 END

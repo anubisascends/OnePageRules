@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[Units]
+﻿CREATE TABLE [ref].[Units]
 (
 	[Id] INT NOT NULL PRIMARY KEY IDENTITY,
 	[FactionId] INT NOT NULL,
@@ -7,5 +7,5 @@
 	[Quality] TINYINT NOT NULL DEFAULT 3,
 	[Defense] TINYINT NOT NULL DEFAULT 3,
 	[Cost] SMALLINT NOT NULL DEFAULT 0,
-	CONSTRAINT FK_Units_FactionId FOREIGN KEY ([FactionId]) REFERENCES [dbo].[Factions]([Id])
+	CONSTRAINT FK_Units_FactionId FOREIGN KEY ([FactionId]) REFERENCES [ref].[Factions]([Id])
 )

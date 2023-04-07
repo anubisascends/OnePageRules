@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[Games]
+﻿CREATE TABLE [ref].[Games]
 (
 	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
     [Label] NVARCHAR(50) NOT NULL, 

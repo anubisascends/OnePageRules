@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[SpecialRules]
+﻿CREATE TABLE [ref].[SpecialRules]
 (
 	[Id] INT NOT NULL PRIMARY KEY IDENTITY,
 	[Label] NVARCHAR(75) NOT NULL,
