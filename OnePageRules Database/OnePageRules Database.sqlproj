@@ -94,6 +94,12 @@
     <Build Include="ref\Programmability\Stored Procedures\sp_merge_unitspecialrules.sql" />
     <Build Include="ref\Programmability\Stored Procedures\sp_datatable_unitspecialrules_alienhives.sql" />
     <Build Include="ref\Programmability\Stored Procedures\sp_datatable_unitspecialrules_battlebrothers.sql" />
+    <Build Include="ref\Programmability\Stored Procedures\sp_merge_factionupgrades.sql" />
+    <Build Include="ref\Programmability\Stored Procedures\sp_datatable_factionupgrades_battlebrothers.sql" />
+    <Build Include="ref\Programmability\Stored Procedures\sp_datatable_factionupgrades_alienhives.sql" />
+    <Build Include="ref\Tables\FactionUpgradeGroups.sql" />
+    <Build Include="ref\Programmability\Stored Procedures\sp_merge_factionupgradegroups.sql" />
+    <Build Include="ref\Programmability\Stored Procedures\sp_datatable_factionupgradegroups_alienhives.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="LocalDatabase.publish.xml" />

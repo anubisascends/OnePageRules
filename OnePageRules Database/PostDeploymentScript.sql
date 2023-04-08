@@ -16,6 +16,12 @@ GO
 EXEC ref.sp_merge_Factions
 GO
 
+exec ref.sp_merge_factionupgrades
+go
+
+exec ref.sp_merge_factionupgradegroups
+go
+
 EXEC ref.sp_merge_equipment
 GO
 
