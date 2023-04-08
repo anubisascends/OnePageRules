@@ -7,7 +7,7 @@ begin
 		(tbl, page, label)
 	values
 		('A', 1, 'Replace any Razor Claws:')
-		,('A', 1, 'Replace any Razor Claws:')
+		,('A', 1, 'Replace one Razor Claws:')
 		,('A', 1, 'Upgrade with any:')
 		,('B', 1, 'Upgrade with any:')
 		,('C', 1, 'Replace any Razor Claws:')
@@ -43,7 +43,19 @@ begin
 		,('K', 2, 'Upgrade with one:')
 
 	select
-		(select fu.id from ref.FactionUpgrades fu inner join ref.Factions f on f.Id = fu.FactionId inner join ref.Games g on f.GameId = g.Id where g.Short = 'GF' and f.Label = 'Alien Hives' and fu.Code = tbl and fu.Page = page) as factionupgradeid,
+		(
+			select 
+				fu.id 
+			from 
+				ref.factionupgrades fu 
+					inner join ref.Factions f on f.Id = fu.FactionId 
+					inner join ref.Games g on f.GameId = g.Id 
+			where 
+				g.Short = 'GF' 
+				and f.Label = 'Alien Hives' 
+				and fu.Code = r.tbl 
+				and fu.Page = r.page
+		) as factionupgradeid,
 		r.label
 	from
 		@result r
