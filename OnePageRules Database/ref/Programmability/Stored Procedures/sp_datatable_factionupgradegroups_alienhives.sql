@@ -10,7 +10,7 @@ begin
 		,('A', 1, 'Replace one Razor Claws:')
 		,('A', 1, 'Upgrade with any:')
 		,('B', 1, 'Upgrade with any:')
-		,('C', 1, 'Replace any Razor Claws:')
+		,('C', 1, 'Replace one Razor Claws:')
 		,('C', 1, 'Upgrade with any:')
 		,('D', 1, 'Replace any Razor Claws:')
 		,('E', 1, 'Upgrade all models with any:')

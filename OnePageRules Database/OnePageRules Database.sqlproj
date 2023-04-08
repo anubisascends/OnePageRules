@@ -100,6 +100,8 @@
     <Build Include="ref\Tables\FactionUpgradeGroups.sql" />
     <Build Include="ref\Programmability\Stored Procedures\sp_merge_factionupgradegroups.sql" />
     <Build Include="ref\Programmability\Stored Procedures\sp_datatable_factionupgradegroups_alienhives.sql" />
+    <Build Include="ref\Tables\FactionUpgradeGroupEquipment.sql" />
+    <Build Include="ref\Programmability\Stored Procedures\sp_datatable_factionupgradegroupequipment_alienhives.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="LocalDatabase.publish.xml" />

@@ -84,6 +84,10 @@ begin
 		,('Explosive Spit')
 		,('Acid Blood')
 		,('Hive Carrier')
+		,('Shredder Gun')
+		,('Heavy Ravager Gun')
+		,('Ravager Gun')
+		,('Spine Shooters')
 
 	select
 		* 
