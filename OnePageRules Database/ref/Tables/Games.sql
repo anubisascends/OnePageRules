@@ -1,0 +1,6 @@
+﻿CREATE TABLE [ref].[Games]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [Label] NVARCHAR(50) NOT NULL, 
+    [Short] NVARCHAR(5) NOT NULL
+)

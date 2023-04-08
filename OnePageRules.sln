@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnePageRules Views", "OnePa
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "OnePageRules Database", "OnePageRules Database\OnePageRules Database.sqlproj", "{E854598F-45A2-4DD5-AC0D-9EA2D973C45B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnePageRules Tests", "OnePageRules Tests\OnePageRules Tests.csproj", "{4DCEDA94-E69C-4FA3-B2E7-DB0AFFD148F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnePageRules Tests", "OnePageRules Tests\OnePageRules Tests.csproj", "{4DCEDA94-E69C-4FA3-B2E7-DB0AFFD148F2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnePageRules WebAPI", "OnePageRules WebAPI\OnePageRules WebAPI.csproj", "{52A069E1-7924-45F3-919C-06922A91E95E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{4DCEDA94-E69C-4FA3-B2E7-DB0AFFD148F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4DCEDA94-E69C-4FA3-B2E7-DB0AFFD148F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4DCEDA94-E69C-4FA3-B2E7-DB0AFFD148F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52A069E1-7924-45F3-919C-06922A91E95E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52A069E1-7924-45F3-919C-06922A91E95E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52A069E1-7924-45F3-919C-06922A91E95E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52A069E1-7924-45F3-919C-06922A91E95E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

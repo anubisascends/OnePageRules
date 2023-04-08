@@ -10,20 +10,20 @@ Post-Deployment Script Template
 --------------------------------------------------------------------------------------
 */
 
-EXEC dbo.sp_mergegames
+EXEC ref.sp_merge_Games
 GO
 
-EXEC dbo.sp_mergefactions
+EXEC ref.sp_merge_Factions
 GO
 
-EXEC dbo.sp_mergeunits
+EXEC ref.sp_merge_equipment
 GO
 
-EXEC dbo.sp_mergeequipment
-GO
+exec ref.sp_merge_units
+go
 
-EXEC dbo.sp_mergespecialrules
-GO
+exec ref.sp_merge_unitequipment
+go
 
-EXEC dbo.sp_mergeequipment_alienhives
-GO
+exec ref.sp_merge_unitspecialrules
+go

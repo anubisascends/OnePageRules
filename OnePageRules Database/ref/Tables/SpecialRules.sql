@@ -1,0 +1,8 @@
+﻿CREATE TABLE [ref].[SpecialRules]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY,
+	[Label] NVARCHAR(75) NOT NULL,
+	[Description] NVARCHAR(MAX) NULL,
+	[FactionID] INT NULL, 
+    [HasValue] BIT NOT NULL DEFAULT 0
+)
