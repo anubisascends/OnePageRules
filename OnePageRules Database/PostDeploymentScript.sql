@@ -24,3 +24,6 @@ go
 
 exec ref.sp_merge_unitequipment
 go
+
+exec ref.sp_merge_unitspecialrules
+go

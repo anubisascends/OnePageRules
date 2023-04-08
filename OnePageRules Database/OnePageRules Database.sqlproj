@@ -77,7 +77,6 @@
     <Build Include="ref\Tables\SpecialRules.sql" />
     <Build Include="ref\Tables\Units.sql" />
     <Build Include="ref\Tables\UnitSpecialRules.sql" />
-    <Build Include="ref\Tables\UpgradeTables.sql" />
     <Build Include="ref\Programmability\Stored Procedures\sp_merge_equipment.sql" />
     <Build Include="ref\Programmability\Stored Procedures\sp_datatable_equipment_alienhives.sql" />
     <Build Include="ref\Programmability\Stored Procedures\sp_datatable_equipment_battlebrothers.sql" />
@@ -88,6 +87,13 @@
     <Build Include="ref\Programmability\Stored Procedures\sp_merge_unitequipment.sql" />
     <Build Include="ref\Programmability\Stored Procedures\sp_datatable_unitequipment_alienhives.sql" />
     <Build Include="ref\Programmability\Stored Procedures\sp_datatable_unitequipment_battlebrothers.sql" />
+    <Build Include="ref\Tables\FactionUpgrades.sql" />
+    <Build Include="ref\Programmability\Stored Procedures\sp_merge_specialrules.sql" />
+    <Build Include="ref\Programmability\Stored Procedures\sp_datatable_specialrules_alienhives.sql" />
+    <Build Include="ref\Programmability\Stored Procedures\sp_datatable_specialrules_battlebrothers.sql" />
+    <Build Include="ref\Programmability\Stored Procedures\sp_merge_unitspecialrules.sql" />
+    <Build Include="ref\Programmability\Stored Procedures\sp_datatable_unitspecialrules_alienhives.sql" />
+    <Build Include="ref\Programmability\Stored Procedures\sp_datatable_unitspecialrules_battlebrothers.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="LocalDatabase.publish.xml" />
