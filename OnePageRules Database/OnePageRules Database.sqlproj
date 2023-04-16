@@ -62,6 +62,10 @@
     <Folder Include="ref\Programmability\Stored Procedures" />
     <Folder Include="ref\Tables" />
     <Folder Include="ref\Views" />
+    <Folder Include="ref\Programmability\Stored Procedures\Datatables" />
+    <Folder Include="ref\Programmability\Stored Procedures\Datatables\Alien Hives GF" />
+    <Folder Include="ref\Programmability\Stored Procedures\Datatables\Battle Brothers GF" />
+    <Folder Include="ref\Programmability\Stored Procedures\Datatables\Blessed Sisters GF" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="PostDeploymentScript.sql" />
@@ -78,22 +82,36 @@
     <Build Include="ref\Tables\Units.sql" />
     <Build Include="ref\Tables\UnitSpecialRules.sql" />
     <Build Include="ref\Programmability\Stored Procedures\sp_merge_equipment.sql" />
-    <Build Include="ref\Programmability\Stored Procedures\sp_datatable_equipment_alienhives.sql" />
-    <Build Include="ref\Programmability\Stored Procedures\sp_datatable_equipment_battlebrothers.sql" />
-    <Build Include="ref\Programmability\Stored Procedures\sp_datatable_equipment_blessedsisters.sql" />
     <Build Include="ref\Programmability\Stored Procedures\sp_merge_units.sql" />
-    <Build Include="ref\Programmability\Stored Procedures\sp_datatable_units_alienhives.sql" />
-    <Build Include="ref\Programmability\Stored Procedures\sp_datatable_units_battlebrothers.sql" />
     <Build Include="ref\Programmability\Stored Procedures\sp_merge_unitequipment.sql" />
-    <Build Include="ref\Programmability\Stored Procedures\sp_datatable_unitequipment_alienhives.sql" />
-    <Build Include="ref\Programmability\Stored Procedures\sp_datatable_unitequipment_battlebrothers.sql" />
     <Build Include="ref\Tables\FactionUpgrades.sql" />
     <Build Include="ref\Programmability\Stored Procedures\sp_merge_specialrules.sql" />
-    <Build Include="ref\Programmability\Stored Procedures\sp_datatable_specialrules_alienhives.sql" />
-    <Build Include="ref\Programmability\Stored Procedures\sp_datatable_specialrules_battlebrothers.sql" />
     <Build Include="ref\Programmability\Stored Procedures\sp_merge_unitspecialrules.sql" />
-    <Build Include="ref\Programmability\Stored Procedures\sp_datatable_unitspecialrules_alienhives.sql" />
-    <Build Include="ref\Programmability\Stored Procedures\sp_datatable_unitspecialrules_battlebrothers.sql" />
+    <Build Include="ref\Programmability\Stored Procedures\sp_merge_factionupgrades.sql" />
+    <Build Include="ref\Tables\FactionUpgradeGroups.sql" />
+    <Build Include="ref\Programmability\Stored Procedures\sp_merge_factionupgradegroups.sql" />
+    <Build Include="ref\Tables\FactionUpgradeGroupEquipment.sql" />
+    <Build Include="ref\Programmability\Stored Procedures\Datatables\Alien Hives GF\sp_datatable_equipment_alienhives.sql" />
+    <Build Include="ref\Programmability\Stored Procedures\Datatables\Alien Hives GF\sp_datatable_factionupgradegroupequipment_alienhives.sql" />
+    <Build Include="ref\Programmability\Stored Procedures\Datatables\Alien Hives GF\sp_datatable_factionupgradegroups_alienhives.sql" />
+    <Build Include="ref\Programmability\Stored Procedures\Datatables\Alien Hives GF\sp_datatable_factionupgrades_alienhives.sql" />
+    <Build Include="ref\Programmability\Stored Procedures\Datatables\Alien Hives GF\sp_datatable_specialrules_alienhives.sql" />
+    <Build Include="ref\Programmability\Stored Procedures\Datatables\Alien Hives GF\sp_datatable_unitequipment_alienhives.sql" />
+    <Build Include="ref\Programmability\Stored Procedures\Datatables\Alien Hives GF\sp_datatable_units_alienhives.sql" />
+    <Build Include="ref\Programmability\Stored Procedures\Datatables\Alien Hives GF\sp_datatable_unitspecialrules_alienhives.sql" />
+    <Build Include="ref\Programmability\Stored Procedures\Datatables\Battle Brothers GF\sp_datatable_equipment_battlebrothers.sql" />
+    <Build Include="ref\Programmability\Stored Procedures\Datatables\Battle Brothers GF\sp_datatable_factionupgrades_battlebrothers.sql" />
+    <Build Include="ref\Programmability\Stored Procedures\Datatables\Battle Brothers GF\sp_datatable_specialrules_battlebrothers.sql" />
+    <Build Include="ref\Programmability\Stored Procedures\Datatables\Battle Brothers GF\sp_datatable_unitequipment_battlebrothers.sql" />
+    <Build Include="ref\Programmability\Stored Procedures\Datatables\Battle Brothers GF\sp_datatable_units_battlebrothers.sql" />
+    <Build Include="ref\Programmability\Stored Procedures\Datatables\Battle Brothers GF\sp_datatable_unitspecialrules_battlebrothers.sql" />
+    <Build Include="ref\Programmability\Stored Procedures\Datatables\Blessed Sisters GF\sp_datatable_equipment_blessedsisters.sql" />
+    <Build Include="ref\Programmability\Stored Procedures\sp_merge_factionupgradegroupequipment.sql" />
+    <Build Include="ref\Tables\FactionUpgradeGroupEquipmentSpecialRules.sql" />
+    <Build Include="ref\Programmability\Stored Procedures\Datatables\Alien Hives GF\sp_datatable_factionupgradegroupequipmentspecialrules_alienhives.sql" />
+    <Build Include="ref\Programmability\Stored Procedures\sp_merge_factionupgradegroupequipmentspecialrules.sql" />
+    <Build Include="ref\Tables\PsychicSpells.sql" />
+    <Build Include="ref\Programmability\Stored Procedures\Datatables\Alien Hives GF\sp_datatable_psychicspells_alienhives.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="LocalDatabase.publish.xml" />
