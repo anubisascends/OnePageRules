@@ -16,6 +16,15 @@ GO
 EXEC ref.sp_merge_Factions
 GO
 
+EXEC ref.sp_merge_equipment
+GO
+
+exec ref.sp_merge_units
+go
+
+exec ref.sp_merge_specialrules
+go
+
 exec ref.sp_merge_factionupgrades
 go
 
@@ -28,14 +37,11 @@ go
 exec ref.sp_merge_factionupgradegroupequipmentspecialrules
 go
 
-EXEC ref.sp_merge_equipment
-GO
-
-exec ref.sp_merge_units
-go
-
 exec ref.sp_merge_unitequipment
 go
 
 exec ref.sp_merge_unitspecialrules
+go
+
+exec ref.sp_merge_psychicspells
 go
