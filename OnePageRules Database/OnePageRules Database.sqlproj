@@ -106,6 +106,12 @@
     <Build Include="ref\Programmability\Stored Procedures\Datatables\Battle Brothers GF\sp_datatable_units_battlebrothers.sql" />
     <Build Include="ref\Programmability\Stored Procedures\Datatables\Battle Brothers GF\sp_datatable_unitspecialrules_battlebrothers.sql" />
     <Build Include="ref\Programmability\Stored Procedures\Datatables\Blessed Sisters GF\sp_datatable_equipment_blessedsisters.sql" />
+    <Build Include="ref\Programmability\Stored Procedures\sp_merge_factionupgradegroupequipment.sql" />
+    <Build Include="ref\Tables\FactionUpgradeGroupEquipmentSpecialRules.sql" />
+    <Build Include="ref\Programmability\Stored Procedures\Datatables\Alien Hives GF\sp_datatable_factionupgradegroupequipmentspecialrules_alienhives.sql" />
+    <Build Include="ref\Programmability\Stored Procedures\sp_merge_factionupgradegroupequipmentspecialrules.sql" />
+    <Build Include="ref\Tables\PsychicSpells.sql" />
+    <Build Include="ref\Programmability\Stored Procedures\Datatables\Alien Hives GF\sp_datatable_psychicspells_alienhives.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="LocalDatabase.publish.xml" />

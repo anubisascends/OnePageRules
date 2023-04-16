@@ -22,6 +22,12 @@ go
 exec ref.sp_merge_factionupgradegroups
 go
 
+exec ref.sp_merge_factionupgradegroupequipment
+go
+
+exec ref.sp_merge_factionupgradegroupequipmentspecialrules
+go
+
 EXEC ref.sp_merge_equipment
 GO
 
