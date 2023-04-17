@@ -14,7 +14,7 @@ builder.Logging.ClearProviders();
 builder.Logging.AddSerilog(logger);
 
 // Add services to the container.
-builder.Services.AddTransient<IRepository, SqlRepository>();
+builder.Services.AddTransient<IGameRepository, GameSqlRepository>();
 
 
 builder.Services.AddControllers();

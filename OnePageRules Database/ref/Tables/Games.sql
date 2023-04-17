@@ -2,5 +2,6 @@
 (
 	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
     [Label] NVARCHAR(50) NOT NULL, 
-    [Short] NVARCHAR(5) NOT NULL
+    [Short] NVARCHAR(5) NOT NULL, 
+    [IsSystem] BIT NOT NULL DEFAULT 0
 )

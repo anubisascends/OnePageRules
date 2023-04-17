@@ -20,9 +20,9 @@ BEGIN
     USING @datatable AS SOURCE
     ON TARGET.Id = SOURCE.id 
     WHEN MATCHED THEN
-        UPDATE SET TARGET.Label = SOURCE.LABEL, TARGET.Short = SOURCE.short
+        UPDATE SET TARGET.Label = SOURCE.LABEL, TARGET.Short = SOURCE.short, target.issystem = 1
     WHEN NOT MATCHED BY TARGET THEN
-        INSERT (ID, Label, Short) VALUES (SOURCE.id, SOURCE.label, SOURCE.short)
+        INSERT (ID, Label, Short, issystem) VALUES (SOURCE.id, SOURCE.label, SOURCE.short, 1)
     WHEN NOT MATCHED BY SOURCE THEN
         DELETE;
 
