@@ -5,10 +5,8 @@ namespace OnePageRules_WebAPI.Repositories
 {
     public abstract class SqlRepository
     {
-        public SqlRepository(IConfiguration configuration)
-        {
-            Configuration = configuration;
-        }
+        public SqlRepository(IConfiguration configuration) =>
+            (Configuration) = (configuration); 
 
         protected IConfiguration Configuration { get; }
 

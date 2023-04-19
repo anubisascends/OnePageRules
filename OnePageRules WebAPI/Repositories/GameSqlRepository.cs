@@ -8,10 +8,7 @@ namespace OnePageRules_WebAPI.Repositories
 {
     public class GameSqlRepository : SqlRepository, IGameRepository
     {
-        public GameSqlRepository(IConfiguration configuration) : base(configuration)
-        {
-
-        }
+        public GameSqlRepository(IConfiguration configuration) : base(configuration) { };
 
         public int Delete(int id)
         {
@@ -112,7 +109,7 @@ namespace OnePageRules_WebAPI.Repositories
                 return ((int)row[0], Convert.ToInt32(row[1]));
             }
 
-            return (-1, 0);
+            return (-2, 0);
         }
     }
 }

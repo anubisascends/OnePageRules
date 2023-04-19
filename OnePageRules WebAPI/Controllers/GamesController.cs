@@ -57,7 +57,8 @@ namespace OnePageRules_WebAPI.Controllers
 
             return result.Item1 switch
             {
-                -1 => BadRequest(),
+                -2 => BadRequest(),
+                -1 => BadRequest("You attempted to update a system game, this is not a valid operation"),
                 0 => Ok(result.Item2),
                 _ => Created($"/games/{result.Item2}", result.Item2)
             };

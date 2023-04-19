@@ -4,6 +4,13 @@ begin
 
 	select @id = id from ref.Games where Label = @Label or Short = @Short
 
+	if (select IsSystem from ref.Games where Id = @id) = 1
+	begin
+		select -1, -1
+
+		return;
+	end
+
 	update ref.Games
 		set
 			Label = @Label,
