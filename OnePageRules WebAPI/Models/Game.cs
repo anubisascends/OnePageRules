@@ -9,8 +9,20 @@
 
         public static readonly Game Empty;
 
-        public static bool IsEmpty(Game game) => game.Id == int.MinValue &&
-            string.IsNullOrEmpty(game.Label) &&
-            string.IsNullOrEmpty(game.ShortLabel);
+        public static bool IsEmpty(Game game) => Empty.GetHashCode() == game.GetHashCode();
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                var hash = 7;
+
+                hash = hash * 23 + Id;
+                hash = hash * 23 + (string.IsNullOrEmpty(Label) ? string.Empty.GetHashCode() : Label.GetHashCode());
+                hash = hash * 23 + (string.IsNullOrEmpty(ShortLabel) ? string.Empty.GetHashCode() : ShortLabel.GetHashCode());
+
+                return hash;
+            }
+        }
     }
 }

@@ -18,6 +18,7 @@ builder.Logging.AddSerilog(logger);
 // Add services to the container
 builder.Services.AddTransient<IGameRepository, GameSqlRepository>();
 builder.Services.AddTransient<IFactionRepository, FactionSqlRepository>();
+builder.Services.AddTransient<IEquipmentRepository, EquipmentSqlRepository>();
 
 builder.Services.AddControllers();
 builder.Services.AddApiVersioning();

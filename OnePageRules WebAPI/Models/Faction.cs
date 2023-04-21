@@ -4,14 +4,26 @@
     {
         static Faction()
         {
-            Empty = new Faction(int.MinValue, int.MinValue, null, int.MinValue);
+            Empty = new Faction(0, 0, null, 0);
         }
 
         public static readonly Faction Empty;
 
-        public static bool IsEmpty(Faction faction) => faction.Id == int.MinValue &&
-            faction.GameId == int.MinValue &&
-            faction.ParentId == int.MinValue &&
-            string.IsNullOrEmpty(faction.Label);
+        public static bool IsEmpty(Faction faction) => Empty.GetHashCode() == faction.GetHashCode();
+
+        public override int GetHashCode() 
+        {
+            unchecked
+            {
+                var hash = 5;
+
+                hash = hash * 23 + Id.GetHashCode();
+                hash = hash * 23 + GameId.GetHashCode();
+                hash = hash * 23 + ParentId.GetHashCode();
+                hash = hash * 23 + (string.IsNullOrEmpty(Label) ? string.Empty.GetHashCode() : Label.GetHashCode());
+
+                return hash; 
+            }
+        }
     }
 }

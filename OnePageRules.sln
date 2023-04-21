@@ -7,6 +7,8 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "OnePageRules Database", "On
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnePageRules WebAPI", "OnePageRules WebAPI\OnePageRules WebAPI.csproj", "{52A069E1-7924-45F3-919C-06922A91E95E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnePageRules Tests", "OnePageRules Tests\OnePageRules Tests.csproj", "{F98FC8B2-AB18-4091-92C3-18B2211D92EB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{52A069E1-7924-45F3-919C-06922A91E95E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52A069E1-7924-45F3-919C-06922A91E95E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52A069E1-7924-45F3-919C-06922A91E95E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F98FC8B2-AB18-4091-92C3-18B2211D92EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F98FC8B2-AB18-4091-92C3-18B2211D92EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F98FC8B2-AB18-4091-92C3-18B2211D92EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F98FC8B2-AB18-4091-92C3-18B2211D92EB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
