@@ -3,15 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32804.467
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnePageRules", "OnePageRules\OnePageRules.csproj", "{15D4F867-A106-41F4-91CA-7B3E998EDA45}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnePageRules Core", "OnePageRules Core\OnePageRules Core.csproj", "{AA4EDE16-6D50-40B1-B39E-3009F41EFE29}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnePageRules Views", "OnePageRules Views\OnePageRules Views.csproj", "{C619D7E8-6EEB-4787-A897-D7C46B4C482E}"
-EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "OnePageRules Database", "OnePageRules Database\OnePageRules Database.sqlproj", "{E854598F-45A2-4DD5-AC0D-9EA2D973C45B}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnePageRules Tests", "OnePageRules Tests\OnePageRules Tests.csproj", "{4DCEDA94-E69C-4FA3-B2E7-DB0AFFD148F2}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnePageRules WebAPI", "OnePageRules WebAPI\OnePageRules WebAPI.csproj", "{52A069E1-7924-45F3-919C-06922A91E95E}"
 EndProject
@@ -21,28 +13,12 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{15D4F867-A106-41F4-91CA-7B3E998EDA45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{15D4F867-A106-41F4-91CA-7B3E998EDA45}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{15D4F867-A106-41F4-91CA-7B3E998EDA45}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{15D4F867-A106-41F4-91CA-7B3E998EDA45}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AA4EDE16-6D50-40B1-B39E-3009F41EFE29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AA4EDE16-6D50-40B1-B39E-3009F41EFE29}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AA4EDE16-6D50-40B1-B39E-3009F41EFE29}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AA4EDE16-6D50-40B1-B39E-3009F41EFE29}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C619D7E8-6EEB-4787-A897-D7C46B4C482E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C619D7E8-6EEB-4787-A897-D7C46B4C482E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C619D7E8-6EEB-4787-A897-D7C46B4C482E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C619D7E8-6EEB-4787-A897-D7C46B4C482E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E854598F-45A2-4DD5-AC0D-9EA2D973C45B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E854598F-45A2-4DD5-AC0D-9EA2D973C45B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E854598F-45A2-4DD5-AC0D-9EA2D973C45B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{E854598F-45A2-4DD5-AC0D-9EA2D973C45B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E854598F-45A2-4DD5-AC0D-9EA2D973C45B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E854598F-45A2-4DD5-AC0D-9EA2D973C45B}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{4DCEDA94-E69C-4FA3-B2E7-DB0AFFD148F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4DCEDA94-E69C-4FA3-B2E7-DB0AFFD148F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4DCEDA94-E69C-4FA3-B2E7-DB0AFFD148F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4DCEDA94-E69C-4FA3-B2E7-DB0AFFD148F2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{52A069E1-7924-45F3-919C-06922A91E95E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{52A069E1-7924-45F3-919C-06922A91E95E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52A069E1-7924-45F3-919C-06922A91E95E}.Release|Any CPU.ActiveCfg = Release|Any CPU

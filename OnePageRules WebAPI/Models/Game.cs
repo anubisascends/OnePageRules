@@ -1,9 +1,16 @@
 ﻿namespace OnePageRules_WebAPI.Models
 {
-    public class Game
+    public record struct Game(int Id, string? Label, string? ShortLabel) 
     {
-        public int Id { get; set; }
-        public string? Label { get; set; }
-        public string? ShortLabel { get; set; }
+        static Game()
+        {
+            Empty = new Game(int.MinValue, null, null);
+        }
+
+        public static readonly Game Empty;
+
+        public static bool IsEmpty(Game game) => game.Id == int.MinValue &&
+            string.IsNullOrEmpty(game.Label) &&
+            string.IsNullOrEmpty(game.ShortLabel);
     }
 }

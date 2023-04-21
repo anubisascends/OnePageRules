@@ -5,5 +5,6 @@
 	[Label] NVARCHAR(50) NOT NULL, 
     [ParentId] INT NULL , 
 	[Version] NVARCHAR(15) NOT NULL DEFAULT '1',
+	[IsSystem] BIT NOT NULL DEFAULT 0,
     CONSTRAINT [FK_Factions_Games] FOREIGN KEY (GameId) REFERENCES [ref].Games([Id])
 )

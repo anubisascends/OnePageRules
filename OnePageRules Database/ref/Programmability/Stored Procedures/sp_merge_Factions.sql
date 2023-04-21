@@ -134,17 +134,19 @@ BEGIN
             TARGET.GameID = (select id from ref.games where short = source.gameid), 
             TARGET.Label = Source.Label, 
             TARGET.ParentID = (select id from @datatable where label = source.parent and gameid = source.gameid),
-            TARGET.Version = SOURCE.Version
+            TARGET.Version = SOURCE.Version,
+            TARGET.IsSystem = 1
     WHEN NOT MATCHED BY TARGET THEN
         INSERT 
-            (ID, GameID, Label, ParentID, Version) 
+            (ID, GameID, Label, ParentID, Version, IsSystem) 
         VALUES 
             (
                 SOURCE.ID, 
                 (select id from ref.games where short = source.gameid), 
                 SOURCE.Label, 
                 (select id from @datatable where label = source.parent and gameid = source.gameid),
-                SOURCE.Version
+                SOURCE.Version,
+                1
             )
     WHEN NOT MATCHED BY SOURCE THEN
         DELETE;

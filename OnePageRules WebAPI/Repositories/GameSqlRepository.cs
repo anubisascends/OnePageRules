@@ -8,15 +8,7 @@ namespace OnePageRules_WebAPI.Repositories
 {
     public class GameSqlRepository : SqlRepository, IGameRepository
     {
-        public GameSqlRepository(IConfiguration configuration) : base(configuration) { };
-
-        public int Delete(int id)
-        {
-            var sql = Properties.Resources.Games_Delete;
-            var parameters = new SqlParameter[] { new SqlParameter("@Id", id) };
-
-            return ExecuteNonQuery(sql, parameters);
-        }
+        public GameSqlRepository(IConfiguration configuration) : base(configuration) { }
 
         public IEnumerable<Game> Get()
         {
@@ -64,7 +56,7 @@ namespace OnePageRules_WebAPI.Repositories
                 };
             }
 
-            return null;
+            return Game.Empty;
         }
 
         public Game Get(string acronym)
@@ -88,28 +80,7 @@ namespace OnePageRules_WebAPI.Repositories
                 };
             }
 
-            return null;
-        }
-
-        public (int, int) Update(string label, string acronym)
-        {
-            var sql = Properties.Resources.Games_Update;
-            var parameters = new SqlParameter[]
-            {
-                new SqlParameter("@Label", label),
-                new SqlParameter("@Short", acronym)
-            };
-
-            var result = ExecuteQuery(sql, parameters);
-
-            if (result.HasRows())
-            {
-                var row = result.FirstRow();
-
-                return ((int)row[0], Convert.ToInt32(row[1]));
-            }
-
-            return (-2, 0);
+            return Game.Empty;
         }
     }
 }

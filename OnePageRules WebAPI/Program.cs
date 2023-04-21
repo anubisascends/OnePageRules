@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Mvc.Versioning;
 using OnePageRules_WebAPI.Repositories;
 using OnePageRules_WebAPI.Repositories.Interfaces;
 using Serilog;
@@ -13,11 +14,14 @@ var logger = new LoggerConfiguration()
 builder.Logging.ClearProviders();
 builder.Logging.AddSerilog(logger);
 
-// Add services to the container.
-builder.Services.AddTransient<IGameRepository, GameSqlRepository>();
 
+// Add services to the container
+builder.Services.AddTransient<IGameRepository, GameSqlRepository>();
+builder.Services.AddTransient<IFactionRepository, FactionSqlRepository>();
 
 builder.Services.AddControllers();
+builder.Services.AddApiVersioning();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
