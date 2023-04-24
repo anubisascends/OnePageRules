@@ -20,15 +20,19 @@ namespace OnePageRules_WebAPI.Controllers
         {
             if (id.HasValue)
             {
-                var result = Repository.Get(id.Value);
+                var result = Repository.GetName(id.Value);
 
-                return !Equipment.IsEmpty(result) ? Ok(result) : NotFound();
+                return string.IsNullOrEmpty(result) ? 
+                    NotFound() : 
+                    Ok(result);
             }
 
             {
-                var result = Repository.GetAll();
+                var result = Repository.GetAllNames();
 
-                return result.Any() ? Ok(result) : NoContent();
+                return result.Any() ? 
+                    Ok(result) : 
+                    NoContent();
             }
         }
     }

@@ -13,16 +13,18 @@ namespace OnePageRules_WebAPI.Repositories
 
         }
 
-        public Equipment Get(int id)
+        public string GetName(int id)
         {
             var sql = "SELECT * FROM ref.Equipment WHERE Id = @Id";
             var parameters = new SqlParameter[] { new SqlParameter ("@Id", id) };
             var data = ExecuteQuery(sql, parameters);
 
-            return data.HasRows() ? createFromRow(data.FirstRow()) : Equipment.Empty;
+            return data.HasRows() ? 
+                (data.FirstRow()["Label"]?.ToString() ?? string.Empty): 
+                string.Empty;
         }
 
-        public IEnumerable<Equipment> GetAll()
+        public IEnumerable<Equipment> GetAllNames()
         {
             var sql = "SELECT * FROM ref.Equipment";
             var data = ExecuteQuery(sql);

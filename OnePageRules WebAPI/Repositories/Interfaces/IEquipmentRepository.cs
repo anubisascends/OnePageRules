@@ -4,7 +4,7 @@ namespace OnePageRules_WebAPI.Repositories.Interfaces
 {
     public interface IEquipmentRepository
     {
-        IEnumerable<Equipment> GetAll();
-        Equipment Get(int id);
+        IEnumerable<Equipment> GetAllNames();
+        string GetName(int id);
     }
 }

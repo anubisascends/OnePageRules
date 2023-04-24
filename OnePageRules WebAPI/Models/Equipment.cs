@@ -24,4 +24,29 @@
             }
         }
     }
+
+    public record struct UnitEquipment(string Label, byte Qty, string Range, byte Attacks)
+    {
+        static UnitEquipment()
+        {
+
+        }
+
+        public static readonly UnitEquipment Empty;
+
+        public override int GetHashCode()
+        {
+            unchecked 
+            {
+                var hash = 3;
+
+                hash = hash * 23 + Qty;
+                hash = hash * 23 + Attacks;
+                hash = hash * 23 + (string.IsNullOrEmpty(Label) ? string.Empty.GetHashCode() : Label.GetHashCode());
+                hash = hash * 23 + (string.IsNullOrEmpty(Range) ? string.Empty.GetHashCode() : Range.GetHashCode());
+
+                return hash;
+            }
+        }
+    }
 }
